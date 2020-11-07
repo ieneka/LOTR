@@ -1,7 +1,17 @@
 <div class="container-fluid">
-    <div class="container d-flex justify-content-center">
-        <img src="../../../assets/img/Titulo.png"  id="title" alt="">
+    <div class="container d-flex justify-content-center bg-light box" *ngIf="display" >
+        <app-wellcome></app-wellcome>
     </div>
-    <video src="../../../assets/video/Mountain - 34608.mp4" id="video_background" autoplay = "autoplay"></video>
-    <audio src="../../../assets/audio/intro.mp3" autoplay = "autoplay"></audio>
+    <div class="text-center" *ngIf="display">
+        <button class="btn btn-warning mt-3" (click)="noneDisplay()">Let's GO!</button>
+    </div>
+    
+    <div class="container d-flex justify-content-center inactive" [@buttonState]="state">
+        <img src="../../../assets/img/Titulo.png"  id="title" alt="" >
+    </div>
+    <video src="../../../assets/video/Mountain - 34608.mp4" id="video_background" (play)="togleButton()" #videoRef>
+    <source src="../../../assets/video/Mountain - 34608.mp4"></video>
+    <audio #musicRef>
+        <source src="../../../assets/audio/intro.mp3">
+    </audio>
 </div>
