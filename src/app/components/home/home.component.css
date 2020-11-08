@@ -14,10 +14,11 @@
      width: 100%;
      position: absolute;
      overflow: hidden;
+     z-index: -1;
  }
 
  .box{
-     margin-top: 8rem;
+     margin-top: 5rem;
      width: 60rem;
      background-image: url('../../../assets/img/mail.jpg');
      border-radius: 4px;

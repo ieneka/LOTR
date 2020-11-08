@@ -7,13 +7,16 @@
         <button class="btn btn-danger mt-3 go" (click)="noneDisplay()">Let's GO!</button>
     </div>
     
-    <div class="container d-flex justify-content-center inactive" [@buttonState]="state">
-        <div class="container">
+    <div class="container d-flex justify-content-center inactive" [@oppen]="state">
+        <div class="container" [@nav-animation]="show" *ngIf="showNav">
             <app-navbar></app-navbar>
         </div>
         <img src="../../../assets/img/Titulo.png"  id="title" alt="" >
     </div>
-    <video src="../../../assets/video/Mountain - 34608.mp4" id="video_background" (play)="togleButton()" #videoRef>
+    <div class="container mt-5" [@nav-animation]="show" *ngIf="showNav">
+        <app-article></app-article>
+    </div>
+    <video src="../../../assets/video/Mountain - 34608.mp4" id="video_background" (play)="togleButton()" (ended)="showNavbar()" #videoRef>
     <source src="../../../assets/video/Mountain - 34608.mp4"></video>
     <audio #musicRef>
         <source src="../../../assets/audio/intro.mp3">
