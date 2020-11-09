@@ -1,0 +1,30 @@
+.fondo{
+    background-image: url('../../../assets/img/books.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1000;
+    overflow: hidden;
+}
+
+.title img{
+    width: 20%;
+    height: 20%;
+}
+
+.box{
+    border: 1px solid #e0a800;
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+hr{
+    border: 1px solid #e0a800;
+}

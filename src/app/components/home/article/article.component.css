@@ -1,6 +1,19 @@
 .box{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
      border: 1px solid #e0a800;
-     margin-top: 15rem;
+     margin-top: 12rem;
+     background-image: url('../../../../assets/img/mail.jpg');
+     border-radius: 4px;
      
+}
+
+.box h2{
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.box p{
+    font-size: 2rem;
+    font-weight: 500;
 }

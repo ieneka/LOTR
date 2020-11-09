@@ -1,14 +1,25 @@
 .navbar{
-    z-index: 2;
+    border-radius: 4px;
+    padding: 0%;
 }
 
 .navbar img{
-    width: 2rem;
-    height: 2rem;
+    width: 14rem;
+    height: 4rem;
 }
 .navbar a{
     font-size: 2rem;
     margin: 1rem;
-    color: #e0a800;
-    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-weight: 600;
+}
+.navbar a :hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.btn{
+    font-size: 1.2rem;
+}
+.letter img{
+    width: 100%;
+    height: 100%;
 }

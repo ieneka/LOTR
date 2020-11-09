@@ -6,6 +6,9 @@
     margin-top: 2rem;
     font-size: 5rem;
 }
+h2{
+    font-weight: 600;
+}
 
 img{
     width:60%;
@@ -14,8 +17,12 @@ img{
 
 .p1{
     font-size: 2rem;
+    text-decoration: underline #A51400;
 }
 
 .p2{
     font-size: 1.8rem;
+}
+.simbolo{
+    width: 100%;
 }

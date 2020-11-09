@@ -21,14 +21,12 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
     trigger('nav-animation', [
       state('inactive', style({
         opacity: 0,
-        transform: 'scale(0.1)'
       })),
       state('active',   style({
         opacity: 1,
-        transform: 'scale(1)'
       })),
-      transition('inactive => active', animate('3000ms')),
-      transition('active => inactive', animate('3000ms'))
+      transition('inactive => active', animate('30000ms')),
+      transition('active => inactive', animate('30000ms'))
     ]),
   ]
 })
@@ -38,6 +36,7 @@ export class HomeComponent implements OnInit {
   display = true;
   show = 'inactive';
   showNav = false;
+  fakeDiv = true;
 
   @ViewChild('videoRef') private videoRef: ElementRef<HTMLVideoElement>;
   @ViewChild('musicRef') private musicRef: ElementRef<HTMLAudioElement>;
@@ -57,6 +56,7 @@ export class HomeComponent implements OnInit {
   }
 
   showNavbar(): void{
+    this.fakeDiv = false;
     this.showNav = true;
     this.show = this.show === 'inactive' ? 'active' : 'inactive';
   }

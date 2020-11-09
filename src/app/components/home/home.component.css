@@ -1,13 +1,12 @@
 #video_background {
-    position: absolute;
+    position: fixed;
     bottom: 0px;
     right: 0px;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    min-width: 10rem;
+    max-width: 150rem;
+    min-height: 10rem;
     z-index: -1000;
-    overflow: hidden;
+    overflow: visible;
  }
 
  #title{
@@ -15,6 +14,7 @@
      position: absolute;
      overflow: hidden;
      z-index: -1;
+     margin-top: 2rem;
  }
 
  .box{
@@ -30,4 +30,9 @@
 
  .go{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    font-weight: 600;
+ }
+ 
+ .fake{
+     height: 10rem;
  }
