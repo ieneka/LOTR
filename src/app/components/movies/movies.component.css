@@ -1,5 +1,5 @@
 .fondo{
-    background-image: url('../../../assets/img/books.jpg');
+    background-image: url('../../../assets/img/fondo1.PNG');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -18,12 +18,13 @@
     height: 20%;
 }
 
+
 .box{
     border: 1px solid #e0a800;
     border-radius: 4px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    background-color: white;
-    margin-bottom: 2rem;
+    background-image: url('../../../assets/img/mail.jpg');
+
 }
 
 hr{

@@ -3,7 +3,6 @@
         <app-navbar></app-navbar>
     </div>
     <div class="container">
-        <hr>
     </div>
     <div class="container text-center title">
         <img src="../../../assets/img/books.png" alt="" >
@@ -18,20 +17,25 @@
         </div>
         <div class="row">
             <div class="col-6 text-center">
-                <h3>Hola</h3>
+                <h3>Choose a Book</h3>
+                <select [formControl]="name" (click)="getChapters(name)">
+                    <option [value]="book" *ngFor="let book of bookName">{{book}}</option>
+                </select>
             </div>
             <div class="col-6 text-center">
-                <h3>Hola</h3>
+                <h3>{{name.value}}</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam vero, facere voluptate deserunt reiciendis dignissimos cum nulla, quas, consequatur tenetur quod ex? Dignissimos reiciendis impedit quia harum tenetur nisi. Velit necessitatibus, laborum et nesciunt natus impedit nulla est maxime!</p>
             </div>
         </div>
         <div class="row">
-            <div class="col-12 text-center">
-                <h3 class="mt-2">Mejores Videos</h3>
-                <video width="320" height="240">
-                    <source src="../../../assets/video/Mountain - 34608.mp4" type="video/mp4">
-                </video>
+            <div class="col-6 text-center portada">
+                <img src="../../../assets/img/lacomunidad.jpg" alt="">
             </div>
+            <div class="col-6 text-center">
+                <h4>Chapters</h4>
+                <ul></ul>
+            </div>
+
         </div>
     </div>
 </div>

@@ -1,5 +1,5 @@
 .fondo{
-    background-image: url('../../../assets/img/books.jpg');
+    background-image: url('../../../assets/img/fondo1.PNG');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -22,9 +22,30 @@
     border: 1px solid #e0a800;
     border-radius: 4px;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-    background-color: white;
+    background-image: url('../../../assets/img/mail.jpg');
 }
 
 hr{
     border: 1px solid #e0a800;
+}
+.portada img{
+    width: 15rem;
+    height: 25rem;
+    padding-bottom: 2rem;
+}
+h2{
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+h3{
+    font-weight: 700;
+}
+
+h4{
+    font-weight: 700;
+}
+
+p{
+    font-size: 1.2rem;
 }
