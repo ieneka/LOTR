@@ -13,8 +13,11 @@ export class BooksComponent implements OnInit {
  books: BooksI;
  bookName: string[];
  bookIds: string[];
- chapters: ChapterI;
  name;
+ book1 = false;
+ book2 = false;
+ book3 = false;
+ selectedValue = "";
 
   constructor(private api: ApiService) {
     this.name = new FormControl('');
@@ -29,25 +32,23 @@ export class BooksComponent implements OnInit {
       this.bookIds = [this.books[0]._id, this.books[1]._id, this.books[2]._id];
     });
   }
-
-  // tslint:disable-next-line: typedef
-  getChapters(name){
-    const code = '5cf5805fb53e011a6467158';
-    if (name === this.bookName[0]){
-      this.api.getChapter(code + '2').subscribe( data => {
-        console.log(data);
-        this.chapters = data;
-      });
-    }else if (name === this.bookName[1]){
-      this.api.getChapter(code + '3').subscribe( data => {
-        this.chapters = data;
-      });
-    }else{
-      this.api.getChapter(code + '4').subscribe( data => {
-        console.log(data);
-      });
+  selectValue() {
+    if (this.name.value === "The Fellowship Of The Ring"){
+      this.book1 = true;
+      this.book2 = false;
+      this.book3 = false;
     }
-    console.log(this.chapters);
+    else if (this.name.value === "The Two Towers"){
+      this.book1 = false;
+      this.book2 = true;
+      this.book3 = false;
+    }
+    else {
+      this.book1 = false;
+      this.book2 = false;
+      this.book3 = true;
+    }
   }
+ 
 
 }

@@ -13,8 +13,10 @@ import { ChapterI } from '../models/chapter-i';
 export class ApiService {
   private urlApi = 'https://the-one-api.dev/v2';
 
+  headers = new HttpHeaders(); 
   constructor(private http: HttpClient) {
-    console.log('service ready');
+    this.headers.append("Content-Type", "application/json");
+    this.headers.append("Authorization", "Bearer" + "PRgx0gTyJZnerSL41Kzv");
   }
 
   getBooks(): Observable<BooksI>{
@@ -28,9 +30,9 @@ export class ApiService {
     return this.http.get(urlApi);
   }
 
-  getChapter(name): Observable<ChapterI>{
-    const urlApi = this.urlApi + '/book' + name + '/chapter';
-    return this.http.get<ChapterI>(urlApi);
+  getMovies(){
+    const urlApi = this.urlApi + '/movie';
+    return this.http.get(urlApi, {headers: this.headers});
   }
 
 }

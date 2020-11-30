@@ -36,10 +36,12 @@ hr{
 h2{
     font-weight: 700;
     padding-top: 1rem;
+    color: #005E3C;
 }
 
 h3{
     font-weight: 700;
+    color:#005E3C;
 }
 
 h4{
@@ -47,5 +49,6 @@ h4{
 }
 
 p{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }

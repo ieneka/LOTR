@@ -9,33 +9,29 @@
     </div>
     
     <div class="container box mt-2">
-        <div class="row">
-            <h2 class="text-center col-12 mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, quaerat.</h2>
-        </div>
-        <div class="row text-center col-12">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore exercitationem ipsam deleniti esse veritatis asperiores reprehenderit quos omnis voluptate sint corporis rem, quisquam porro ab tempora odit. Veritatis, aut quam.</p>
+        <div class="text-center mt-4">
+            <p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.</p>
         </div>
         <div class="row">
             <div class="col-6 text-center">
                 <h3>Choose a Book</h3>
-                <select [formControl]="name" (click)="getChapters(name)">
+                <select [formControl]="name" class="mb-3" (change)="selectValue()">
                     <option [value]="book" *ngFor="let book of bookName">{{book}}</option>
                 </select>
             </div>
-            <div class="col-6 text-center">
-                <h3>{{name.value}}</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam vero, facere voluptate deserunt reiciendis dignissimos cum nulla, quas, consequatur tenetur quod ex? Dignissimos reiciendis impedit quia harum tenetur nisi. Velit necessitatibus, laborum et nesciunt natus impedit nulla est maxime!</p>
-            </div>
         </div>
         <div class="row">
-            <div class="col-6 text-center portada">
-                <img src="../../../assets/img/lacomunidad.jpg" alt="">
-            </div>
             <div class="col-6 text-center">
-                <h4>Chapters</h4>
-                <ul></ul>
+                <h3>{{name.value}}</h3>
+                <p *ngIf="book1">When the eccentric hobbit Bilbo Baggins leaves his home in the Shire, he gives his greatest treasure to his heir Frodo: a magic ring that makes its wearer invisible. Because of the difficulty Bilbo has in giving the ring away, his friend the wizard Gandalf the Grey suspects that the ring is more than it appears. Some years later, Gandalf reveals to Frodo that the ring is in fact the One Ring, forged by Sauron the Dark Lord thousands of years before to enable him to dominate and enslave all of Middle-earth. Gandalf tells Frodo that the Ring must be destroyed to defeat Sauron's evil. Frodo sets off with three companions, fellow hobbits Merry, Pippin, and Sam.</p>
+                <p *ngIf="book2">As Frodo and Sam leave, a band of orcs captures Merry and Pippin and kills Boromir. Aragorn, Legolas, and Gimli decide to let the Ringbearer go and instead rescue Merry and Pippin. Aragorn, Legolas, and Gimli pursue the orcs as they run across the fields of Rohan toward Saruman's fortress at Isengard. They find evidence that the orcs of Sauron and Saruman have quarreled and that either one hobbit is still alive, but they begin to lose hope as they fall farther and farther behind. After three days of running with little rest, they meet a troop of the riders of Rohan. The horsemen's leader, Éomer, informs the trio that the orcs were destroyed on the edge of Fangorn forest, with no survivors. He lends them horses to continue the pursuit, but offers little hope that the hobbits escaped the battle.</p>
+                <p *ngIf="book3">To keep Pippin out of further trouble, Gandalf rides with him to Minas Tirith, the city that Sauron's armies will soon besiege. They meet with Boromir's father Denethor, the Ruling Steward of Gondor, and in gratitude for Boromir's sacrifice (saving them from the orcs at Parth Galen), Pippin pledges his service to the steward as a Guard of the White Tower. Denethor does not trust Gandalf, and he knows that the wizard has brought Aragorn to reclaim the throne. Faramir returns to the city, wearied from fighting, and reports his encounter with Frodo. Angry that his son did not bring the Ring to Gondor, Denethor sends the exhausted captain back into the field to lead a rearguard action against the oncoming army. When they make their last dash for the safety of the gates, Gandalf rides out to defend them from the flying Nazgûl, but Faramir falls at the gates.</p>
             </div>
-
+            <div class="col-6 text-center portada">
+                <img *ngIf="book1"src="../../../assets/img/book1.jpg" alt="">
+                <img *ngIf="book2" src="../../../assets/img/book2.jpg" alt="">
+                <img *ngIf="book3"src="../../../assets/img/book3.jpg" alt="">
+            </div>
         </div>
     </div>
 </div>
