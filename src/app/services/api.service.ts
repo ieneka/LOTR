@@ -13,10 +13,14 @@ import { ChapterI } from '../models/chapter-i';
 export class ApiService {
   private urlApi = 'https://the-one-api.dev/v2';
 
-  headers = new HttpHeaders(); 
+  private headers = new HttpHeaders({
+    "Authorization": "Bearer " + "PRgx0gTyJZnerSL41Kzv",
+    "Content-Type": "application/json"
+    }
+  );
+  
   constructor(private http: HttpClient) {
-    this.headers.append("Content-Type", "application/json");
-    this.headers.append("Authorization", "Bearer" + "PRgx0gTyJZnerSL41Kzv");
+    
   }
 
   getBooks(): Observable<BooksI>{
