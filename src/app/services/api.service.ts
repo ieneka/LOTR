@@ -2,7 +2,8 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BooksI } from '../models/books';
-import { ChapterI } from '../models/chapter-i';
+import { CharactersI } from '../models/characters';
+import { MovieI } from '../models/movie';
 
 
 
@@ -34,9 +35,14 @@ export class ApiService {
     return this.http.get(urlApi);
   }
 
-  getMovies(){
+  getMovies(): Observable<MovieI>{
     const urlApi = this.urlApi + '/movie';
-    return this.http.get(urlApi, {headers: this.headers});
+    return this.http.get<MovieI>(urlApi, {headers: this.headers});
+  }
+
+  getCharapters(): Observable<CharactersI>{
+    const urlApi = this.urlApi + '/character';
+    return this.http.get<CharactersI>(urlApi, {headers: this.headers});
   }
 
 }

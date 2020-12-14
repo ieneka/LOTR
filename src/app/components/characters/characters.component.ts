@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../../services/api.service';
+import { FormControl } from '@angular/forms';
+import { CharactersI } from '../../models/characters';
 
 @Component({
   selector: 'app-characters',
@@ -6,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
+  name;
+  characters: CharactersI;
+  constructor(private api: ApiService) {
+    this.name = new FormControl('');
+   }
 
-  constructor() { }
-
-  ngOnInit(): void {
+  ngOnInit(){
+    this.api.getCharapters().subscribe( data => {
+      this.characters = data['docs'];
+      console.log(data)
+    });
   }
 
 }
