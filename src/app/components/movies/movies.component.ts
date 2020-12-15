@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { FormControl } from '@angular/forms';
 import { MovieI } from '../../models/movie';
+import { stringify } from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-movies',
@@ -10,35 +11,26 @@ import { MovieI } from '../../models/movie';
 })
 export class MoviesComponent implements OnInit {
   name;
-  movies: MovieI;
-  selected;
-  nomitations;
-  wins;
-  revenue;
-  budget;
-  tomatoes;
-  time;
-  id ;
+  movies = [];
+  moviesApi = [];
+  selected : MovieI;
+  click = false;
 
   constructor(private api: ApiService) {
-    this.name = new FormControl('');
    }
 
   ngOnInit(): void {
     this.api.getMovies().subscribe( data => {
       this.movies = data['docs'];
+      this.moviesApi.push(this.movies);
     });
-    console.log(this.movies)
+    console.log(this.moviesApi);
   }
 
   selectedMovie() {
-    console.log(this.name.value);
-      this.nomitations = this.selected.academyAwardNominations;
-      this.wins = this.selected.academyAwardWins;
-      this.revenue = this.selected.boxOfficeRevenueInMillions;
-      this.budget = this.selected.budgetInMillions;
-      this.tomatoes = this.selected.rottenTomatesScore;
-      this.time = this.selected.runtimeInMinutes;
+    this.click = true;
+    this.selected = this.name;
+    console.log(this.selected);
   }
 
 }
