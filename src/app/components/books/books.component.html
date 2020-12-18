@@ -9,11 +9,14 @@
     </div>
     
     <div class="container box mt-2">
-        <div class="text-center mt-4">
-            <p>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien. Set in Middle-earth, the world at some distant time in the past, the story began as a sequel to Tolkien's 1937 children's book The Hobbit, but eventually developed into a much larger work. Written in stages between 1937 and 1949, The Lord of the Rings is one of the best-selling books ever written, with over 150 million copies sold.</p>
+        <div class="text-center mt-3">
+            <h2><u>The Lord of the Rings is an epic high fantasy novel by the English author and scholar J. R. R. Tolkien, set in Middle-earth. </u></h2>
+            <p class="container">
+                The Lord of the Rings been reprinted many times and translated into at least 38 languages. The enduring popularity of The Lord of the Rings has led to numerous references in popular culture. 
+            </p>
         </div>
         <div class="row">
-            <div class="col-6 text-center">
+            <div class="col-6 text-center ">
                 <h3>Choose a Book</h3>
                 <select [formControl]="name" class="mb-3" (change)="selectValue()">
                     <option [value]="book" *ngFor="let book of bookName">{{book}}</option>
