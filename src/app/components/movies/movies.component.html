@@ -10,22 +10,24 @@
     
     <div class="container box">
         <div class="row">
-            <div class="text-center col-12 mt-2 ">
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, error.</h3>
+            <div class="text-center col-12 mt-4 ">
+                <h3><u>The Lord of the Rings and The Hobbit are films epic fantasy adventure films , based on the novel written by J. R. R. Tolkien. </u></h3>
             </div>
         </div>
         <div class="row ">
             <div class="col-12 text-center text-center">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore quis, quia repudiandae accusantium pariatur quidem tempora iste necessitatibus ratione iure vitae amet hic. Culpa est, quasi molestiae non qui hic vero delectus ullam nulla similique, quibusdam magni ea. Exercitationem, culpa?</p>
+                <p>The Lord of the Rings is widely regarded as one of the greatest and most influential film series ever made. It was a major financial success and is among the highest-grossing film series of all time with $2.981 billion in worldwide receipts. Each film was critically acclaimed, with high praise for their innovative special effects, acting, musical score, and emotional depth, and heavily awarded, the series winning 17 out of its 30 Academy Award nominations.</p>
             </div>
         </div>
         <div class="row d-flex">
-            <div class="col-9 text-center ">
+            <div class="col-9 text-center mb-3 ">
                 <h3 *ngIf="click"> {{selected.name}} </h3>
-                <video width="100%" height="100%">
-                    <source src="../../../assets/video/Mountain - 34608.mp4"
-                        type="video/mp4">
-                </video>
+                <iframe *ngIf="lotr1" width="560" height="315" src="https://www.youtube.com/embed/V75dMMIW2B4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe *ngIf="lotr2" width="560" height="315" src="https://www.youtube.com/embed/LbfMDwc4azU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe *ngIf="lotr3" width="560" height="315" src="https://www.youtube.com/embed/r5X-hFf6Bwo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe *ngIf="hobbit1" width="560" height="315" src="https://www.youtube.com/embed/SDnYMbYB-nU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe *ngIf="hobbit2" width="560" height="315" src="https://www.youtube.com/embed/fnaojlfdUbs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe *ngIf="hobbit3" width="560" height="315" src="https://www.youtube.com/embed/iVAgTiBrrDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-3 text-center text-center">
                 <h3>Choose a Movie</h3>
@@ -35,12 +37,12 @@
                 <div *ngIf="click">   
                     <h3>Information </h3>
                     <ul class="text-left">
-                        <li>Award nominations: {{selected.academyAwardNominations}} </li>
-                        <li>Award wins: {{selected.academyAwardWins}}</li>
-                        <li>Revenue in millions: {{selected.boxOfficeRevenueInMillions}}</li>
-                        <li>Budget in millions: {{selected.budgetInMillions}}</li>
-                        <li>Rotten tomates score: {{selected.rottenTomatesScore}}</li>
-                        <li>Time in minutes: {{selected.runtimeInMinutes}}</li>
+                        <li>Award nominations: <span class="text-success font-weight-bold">{{selected.academyAwardNominations}}</span> </li>
+                        <li>Award wins: <span class="text-success font-weight-bold">{{selected.academyAwardWins}}</span></li>
+                        <li>Revenue in millions: <span class="text-success font-weight-bold">{{selected.boxOfficeRevenueInMillions}}$</span></li>
+                        <li>Budget in millions: <span class="text-success font-weight-bold">{{selected.budgetInMillions}}$</span></li>
+                        <li>Rotten tomates score: <span class="text-success font-weight-bold">{{selected.rottenTomatesScore}}</span></li>
+                        <li>Time in minutes: <span class="text-success font-weight-bold">{{selected.runtimeInMinutes}}</span></li>
                     </ul>
                 </div> 
             </div>
