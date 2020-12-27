@@ -28,3 +28,44 @@
 hr{
     border: 1px solid #e0a800;
 }
+.top{
+    padding: 0%;
+}
+
+.top img{
+    width: 8rem;
+    height: 10rem;
+    border: 1px solid #e0a800;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+.top :hover{
+    cursor: pointer;
+    border: 3px solid white;
+}
+h2{
+    font-weight: 700;
+    
+}
+h3{
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+li{
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+a :hover{
+    text-decoration: underline #e0a800;
+}
+
+.noneDecoration{
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.6rem;
+}

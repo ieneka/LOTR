@@ -54,11 +54,23 @@ export class HomeComponent implements OnInit {
 
     this.display = false;
   }
+  skipDisplay(){
+    this.videoRef.nativeElement.play();
+    this.musicRef.nativeElement.play();
+
+    this.display = false;
+  }
 
   showNavbar(): void{
     this.fakeDiv = false;
     this.showNav = true;
     this.show = this.show === 'inactive' ? 'active' : 'inactive';
   }
+  /* skipVideo(){
+    this.fakeDiv = false;
+    this.showNav = true;
+    this.show =  'active';
+    this.display = false;
+  } */
 
 }

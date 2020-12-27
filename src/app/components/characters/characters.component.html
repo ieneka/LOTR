@@ -10,21 +10,71 @@
     
     <div class="container box">
         <div class="row">
-            <h2 class="text-center col-12 mt-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem, quaerat.</h2>
+            <h3 class="text-center col-12 mt-3"><u>Middle-earth characters</u></h3>
         </div>
         <div class="row text-center col-12">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore exercitationem ipsam deleniti esse veritatis asperiores reprehenderit quos omnis voluptate sint corporis rem, quisquam porro ab tempora odit. Veritatis, aut quam.</p>
+            <p>Statistics on the demography of Middle-earth based on LotrProject's extensive database of characters. Based on 933 characters from the Hobbit, Lord of the Rings and Tolkien's posthumously published works including the Silmarillion.</p>
         </div>
-        <div class="row">
+        <div class="row ">
+            <div class="w-50 text-center col-12 mb-2">
+                <h2>TOP CHARACTERS</h2>
+            </div>
+            <div class="col-2 text-center top">
+                <img src="../../../assets/img/frodo.jpg" alt="" (click)="findCharacters('Frodo')">
+            </div>
+            <div class="col-2 text-center top">
+                <img src="../../../assets/img/Aragorn.jpg" alt=""(click)="findCharacters('Aragorn')">
+            </div>
+            <div class="col-2 text-center top">
+                <img src="../../../assets/img/Legolas.jpg" alt="" (click)="findCharacters('Legolas')">
+            </div>
+            <div class="col-2 text-center top">
+                <img src="../../../assets/img/gimli.jpg" alt="" (click)="findCharacters('Gimli')">
+            </div>
+            <div class="col-2 text-center top">
+                <img src="../../../assets/img/gandalf.jpg" alt="" (click)="findCharacters('Gandalf')">
+            </div>
+            <div class="col-2 text-center top">
+                <img src="../../../assets/img/golum.jpg" alt="" (click)="findCharacters('Gollum')">
+            </div>
+        </div>
+        <div class="row mt-4">
             <div class="col-6 text-center">
                 <h3>Choose a Character</h3>
-                <select [formControl]="name" class="mb-3">
-                    <option [value]="character" *ngFor="let character of characters">{{character.name}}</option>
+                <select [(ngModel)]="name" class="mb-3" (change)="selectedCharacter()">
+                    <option [ngValue]="character" *ngFor="let character of characters">{{character.name}}</option>
                 </select>
+                <ul class=" mt-3" *ngIf="click">
+                    <li class="noneDecoration">
+                        wikiUrl: <a href="{{selected.wikiUrl}}"><span class="text-success font-weight-bold">{{selected.wikiUrl}}</span></a>
+                    </li>
+                </ul>
             </div>
-            <div class="col-6 text-center">
-                <h3>hola</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nam vero, facere voluptate deserunt reiciendis dignissimos cum nulla, quas, consequatur tenetur quod ex? Dignissimos reiciendis impedit quia harum tenetur nisi. Velit necessitatibus, laborum et nesciunt natus impedit nulla est maxime!</p>
+            <div class="col-6 text-left" *ngIf="click">
+                <h3 class="text-center">{{selected.name}}</h3>
+                <ul>
+                    <li>
+                         birth: <span class="text-success font-weight-bold">{{selected.birth}}</span>
+                    </li>
+                    <li>
+                        death: <span class="text-success font-weight-bold">{{selected.death}} </span>
+                    </li>
+                    <li>
+                        gender: <span class="text-success font-weight-bold">{{selected.gender}}</span>
+                    </li>
+                    <li>
+                        hair: <span class="text-success font-weight-bold">{{selected.hair}}</span>
+                    </li>
+                    <li>
+                        height: <span class="text-success font-weight-bold">{{selected.height}}</span>
+                    </li>
+                    <li>
+                        race: <span class="text-success font-weight-bold">{{selected.race}}</span>
+                    </li>
+                    <li>
+                        spouse: <span class="text-success font-weight-bold">{{selected.spouse}}</span>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

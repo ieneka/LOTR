@@ -17,3 +17,17 @@
     font-size: 2rem;
     font-weight: 500;
 }
+
+.contents{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0a800;
+    background-image: url('../../../../assets/img/mail.jpg');
+    border-radius: 4px;
+    margin: 0%;
+}
+
+.contents img{
+    width: 10rem;
+    height: 12rem;
+    
+}
