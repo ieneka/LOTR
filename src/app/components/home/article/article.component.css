@@ -18,16 +18,36 @@
     font-weight: 500;
 }
 
-.contents{
+.contents1{
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     border: 1px solid #e0a800;
-    background-image: url('../../../../assets/img/mail.jpg');
+    background-image: url('../../../../assets/img/peliculas.jpg');
     border-radius: 4px;
-    margin: 0%;
+    padding: 0%;
+    background-size: cover;
+}
+.contents2{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0a800;
+    background-image: url('../../../../assets/img/libros.jpg');
+    border-radius: 4px;
+    padding: 0%;
+    background-size: cover;
+}
+.contents3{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px solid #e0a800;
+    background-image: url('../../../../assets/img/personajes.png');
+    border-radius: 4px;
+    padding: 0%;
+    background-size: cover;
 }
 
-.contents img{
-    width: 10rem;
-    height: 12rem;
+img{
+    width: 100%;
+    height: 100%;
     
+}
+a :hover{
+    border: 2px solid white;
 }

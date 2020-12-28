@@ -38,6 +38,7 @@ export class HomeComponent implements OnInit {
   showNav = false;
   fakeDiv = true;
   skip = false;
+  skipButton = true;
 
   @ViewChild('videoRef') private videoRef: ElementRef<HTMLVideoElement>;
   @ViewChild('musicRef') private musicRef: ElementRef<HTMLAudioElement>;
@@ -54,6 +55,7 @@ export class HomeComponent implements OnInit {
     this.musicRef.nativeElement.play();
 
     this.display = false;
+    this.skipButton = false;
   }
   skipDisplay(){
     this.videoRef.nativeElement.play();
@@ -72,6 +74,7 @@ export class HomeComponent implements OnInit {
     this.display = false;
     this.skip = true;
     this.fakeDiv = false;
+    this.skipButton = false;
   }
 
 }

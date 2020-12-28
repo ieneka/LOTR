@@ -3,13 +3,14 @@
     <div class="container d-flex justify-content-center bg-light box" *ngIf="display" >
         <app-wellcome></app-wellcome>
     </div>
-    <div class="text-center" *ngIf="display">
-        <button class="btn btn-warning mt-3 go" (click)="noneDisplay()">Let's GO!</button>
-        <div class="text-right">    
+    <div class="row d-flex justify-content-center">     
+        <div class="text-center" *ngIf="display">
+            <button class="btn btn-warning mt-3 go" (click)="noneDisplay()">Let's GO!</button>
+        </div>
+        <div class="text-center ml-3" *ngIf="skipButton">    
             <button class="btn btn-danger mt-3 go" (click)="skipVideo()">Skip</button>
         </div>
     </div>
-    
     <div>
         <div class="container fake" *ngIf="fakeDiv">
 
