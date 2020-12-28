@@ -16,6 +16,13 @@
      z-index: -1;
      margin-top: 2rem;
  }
+ #title1{
+    width: 90%;
+    margin-top: 2rem;
+    width: 60rem;
+    z-index: -1;
+    position: absolute;
+}
 
  .box{
      margin-top: 5rem;

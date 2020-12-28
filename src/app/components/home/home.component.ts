@@ -37,6 +37,7 @@ export class HomeComponent implements OnInit {
   show = 'inactive';
   showNav = false;
   fakeDiv = true;
+  skip = false;
 
   @ViewChild('videoRef') private videoRef: ElementRef<HTMLVideoElement>;
   @ViewChild('musicRef') private musicRef: ElementRef<HTMLAudioElement>;
@@ -66,11 +67,11 @@ export class HomeComponent implements OnInit {
     this.showNav = true;
     this.show = this.show === 'inactive' ? 'active' : 'inactive';
   }
-  /* skipVideo(){
-    this.fakeDiv = false;
-    this.showNav = true;
-    this.show =  'active';
+  skipVideo(){
+    this.videoRef.nativeElement.currentTime = this.videoRef.nativeElement.duration;
     this.display = false;
-  } */
+    this.skip = true;
+    this.fakeDiv = false;
+  }
 
 }

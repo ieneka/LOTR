@@ -5,9 +5,9 @@
     </div>
     <div class="text-center" *ngIf="display">
         <button class="btn btn-warning mt-3 go" (click)="noneDisplay()">Let's GO!</button>
-        <!-- <div class="text-right">    
-            <button class="btn btn-danger mt-3 go" (click)="showNavbar()">Skip</button>
-        </div> -->
+        <div class="text-right">    
+            <button class="btn btn-danger mt-3 go" (click)="skipVideo()">Skip</button>
+        </div>
     </div>
     
     <div>
@@ -19,6 +19,9 @@
         </div>
         <div class="container inactive" [@oppen]="state">
             <img src="../../../assets/img/Titulo.png"  id="title" alt="" >
+        </div>
+        <div *ngIf="skip" class="d-flex justify-content-center">
+            <img src="../../../assets/img/Titulo.png"  id="title1" alt="" >
         </div>
     </div>
     <div class="container mt-5" *ngIf="showNav">
