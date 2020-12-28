@@ -31,7 +31,9 @@ hr{
 .portada img{
     width: 15rem;
     height: 25rem;
-    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.5);
+
 }
 h2{
     font-weight: 700;
@@ -50,3 +52,7 @@ p{
     font-size: 1.2rem;
     font-weight: 600;
 }
+a :hover{
+    border: 2px solid white;
+}
+
